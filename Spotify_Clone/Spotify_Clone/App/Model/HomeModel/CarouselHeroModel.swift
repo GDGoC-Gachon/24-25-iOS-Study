@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct CarouselHeroItem: Identifiable {
+    let id = UUID()
+    var image: String
+    var subtitle: String
+    var description: String
+}
