@@ -11,38 +11,35 @@ struct ContentView: View {
     @State private var selectedTab = 0
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.black
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().isTranslucent = true
+        UITabBar.appearance().backgroundColor = .black
     }
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("1")
+            HomepageView()
                 .tabItem {
-                    Image("HomeTab")
-
-                    Text("Home")
-                        .font(Font.customFont(.body7_regular))
-                        .foregroundColor(selectedTab == 0 ? Color.iconPrimary : Color.iconSecondary)
+                  VStack {
+                    selectedTab == 0 ? Image("HomeOn") : Image("HomeOff")
+                  }
                 }
                 .tag(0)
             
             Text("2")
                 .tabItem {
-                    Image("SearchTab")
-
-                    Text("Search")
-                        .font(Font.customFont(.body7_regular))
-                        .foregroundColor(selectedTab == 1 ? Color.iconPrimary : Color.iconSecondary)
+                  VStack {
+                      selectedTab == 0 ? Image("SearchOn") : Image("SearchOff")
+                  }
                 }
                 .tag(1)
             
             Text("3")
                 .tabItem {
-                    Image("LibraryTab")
-
-                    Text("Your library")
-                        .font(Font.customFont(.body7_regular))
-                        .foregroundColor(selectedTab == 2 ? Color.iconPrimary : Color.iconSecondary)
+                    VStack {
+                        selectedTab == 0 ? Image("LibraryOn") : Image("LibraryOff")
+                    }
                 }
                 .tag(2)
         }
