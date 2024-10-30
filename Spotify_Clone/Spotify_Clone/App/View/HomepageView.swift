@@ -46,17 +46,25 @@ struct HomepageView: View {
                             }
                         }
                     }
-                }
-                
-                HStack {
-                    CarouselHero(
-                        carouselTitle: "title",
-                        items: [
-                            CarouselHeroItem(image: "CarouselHero_1", subtitle: "Subtitle 1", description: "Description 1"),
-                            CarouselHeroItem(image: "CarouselHero_1", subtitle: "Subtitle 2", description: "Description 2"),
-                            CarouselHeroItem(image: "CarouselHero_1", subtitle: "Subtitle 3", description: "Description 3")
-                        ]
-                    )
+                    
+                    Spacer()
+                    
+                    // RecommendedCard
+                    RecommendedCard(recommendProfile: "RecommendedCard_Profile", recommendArtist: "Artist Monkeys", recommendAlbum: "RecommendedCard_Album", recommendSong: "I wanna Be Yours")
+                    
+                    Spacer()
+                    
+                    // CarouselHero
+                    HStack {
+                        CarouselHero(
+                            carouselTitle: "title",
+                            items: [
+                                CarouselHeroItem(image: "CarouselHero_1", subtitle: "Subtitle 1", description: "Description 1"),
+                                CarouselHeroItem(image: "CarouselHero_1", subtitle: "Subtitle 2", description: "Description 2"),
+                                CarouselHeroItem(image: "CarouselHero_1", subtitle: "Subtitle 3", description: "Description 3")
+                            ]
+                        )
+                    }
                 }
             }
         }
