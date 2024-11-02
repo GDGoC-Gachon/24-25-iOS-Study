@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State var searchText: String = ""
+    
     var body: some View {
         ZStack {
             Color.surfacePrimary.edgesIgnoringSafeArea(.all) // 배경 색 검정으로 설정
@@ -29,6 +31,17 @@ struct SearchView: View {
                             .foregroundColor(Color.textPrimary)
                     }
                     .padding(.horizontal, 16)
+                    
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(Color.iconBlack)
+                        TextField("(What do you want to play", text: $searchText)
+                            .foregroundColor(Color.textPrimary)
+                    }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.iconPrimary, lineWidth: 1)
+                    )
                 }
             }
         }
