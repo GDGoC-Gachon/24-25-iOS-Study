@@ -1,2 +1,2 @@
 # 24-25-iOS-Study
-Spotify Clone in SwiftUI
+[24-25 GDG Gachon] iOS 스터디
