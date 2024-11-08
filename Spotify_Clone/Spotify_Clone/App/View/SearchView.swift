@@ -68,6 +68,40 @@ struct SearchView: View {
                     }
                     .padding(.horizontal, 16)
                 }
+                
+                Spacer().padding(.top, 16)
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Brose All")
+                        .foregroundColor(Color.textPrimary)
+                        .font(Font.customFont(.body3_regular))
+                        .padding(.horizontal, 16)
+                    
+                    VStack {
+                        HStack {
+                            Image("BrowseCard_1")
+                                .padding(.trailing, 16)
+                            Image("BrowseCard_2")
+                        }
+                        
+                        Spacer().padding(.bottom, 4)
+                        
+                        HStack {
+                            Image("BrowseCard_3")
+                                .padding(.trailing, 16)
+                            Image("BrowseCard_4")
+                        }
+                        
+                        Spacer().padding(.bottom, 4)
+                        
+                        HStack {
+                            Image("BrowseCard_5")
+                                .padding(.trailing, 16)
+                            Image("BrowseCard_6")
+                        }
+                    }
+                    .padding(.horizontal, 16)
+                }
             }
         }
     }
