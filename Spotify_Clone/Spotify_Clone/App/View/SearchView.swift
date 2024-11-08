@@ -32,16 +32,23 @@ struct SearchView: View {
                     }
                     .padding(.horizontal, 16)
                     
+                    Spacer().padding(.top, 16)
+                    
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(Color.iconBlack)
-                        TextField("(What do you want to play", text: $searchText)
-                            .foregroundColor(Color.textPrimary)
+                        TextField("What do you want to play?", text: $searchText)
+                            .foregroundColor(Color.textTertiary)
+                            .font(Font.customFont(.body3_regular))
                     }
+                    .padding(12)
+                    .background(Color.white)
+                    .cornerRadius(8)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.iconPrimary, lineWidth: 1)
                     )
+                    .padding(.horizontal, 16)
                 }
             }
         }
