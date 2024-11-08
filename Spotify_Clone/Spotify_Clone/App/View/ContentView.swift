@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            Text("2")
+            SearchView()
                 .tabItem {
                   VStack {
                       selectedTab == 0 ? Image("SearchOn") : Image("SearchOff")
