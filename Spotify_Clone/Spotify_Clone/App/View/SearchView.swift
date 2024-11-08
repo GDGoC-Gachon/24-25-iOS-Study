@@ -50,6 +50,24 @@ struct SearchView: View {
                     )
                     .padding(.horizontal, 16)
                 }
+                
+                Spacer().padding(.top, 16)
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Explore your musical type")
+                        .foregroundColor(Color.textPrimary)
+                        .font(Font.customFont(.body3_regular))
+                        .padding(.horizontal, 16)
+                    
+                    HStack {
+                        Image("Music_type_1")
+                            .padding(.trailing, 16)
+                        Image("Music_type_2")
+                            .padding(.trailing, 16)
+                        Image("Music_type_3")
+                    }
+                    .padding(.horizontal, 16)
+                }
             }
         }
     }
