@@ -35,7 +35,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            Text("3")
+            LibraryView()
                 .tabItem {
                     VStack {
                         selectedTab == 0 ? Image("LibraryOn") : Image("LibraryOff")
