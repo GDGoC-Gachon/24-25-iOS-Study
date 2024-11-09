@@ -35,7 +35,33 @@ struct LibraryView: View {
                     }
                     .padding(.horizontal, 16)
                 }
+                
+                HStack(spacing: 16) {
+                    ForEach(["Playlists", "Podcasts", "Albums", "Artists"], id: \.self) { title in
+                        Text(title)
+                            .font(Font.customFont(.body7_regular))
+                            .foregroundColor(Color.textPrimary)
+                            .frame(width: getWidth(for: title), height: 30) // 텍스트의 프레임 설정
+                            .background(Color.chipSecondary)
+                            .cornerRadius(16)
+                            .padding(.vertical, 24)
+                    }
+                }
+                .padding(.trailing, 32)
             }
+        }
+    }
+    
+    private func getWidth(for title: String) -> CGFloat {
+        switch title {
+        case "Playlists":
+            return 73
+        case "Podcasts":
+            return 77
+        case "Albums":
+            return 70
+        default:
+            return 65
         }
     }
 }
